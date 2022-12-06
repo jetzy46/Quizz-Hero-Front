@@ -1,19 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { MainRouter, AdminRouter } from "./index";
+import { PageContainer } from "./index";
 
-function App() {
-  return (
-    <MainContainer>
-      <div>
-        <h1>Quizz Hero</h1>
-      </div>
-    </MainContainer>
-  );
-}
+const App = () => (
+  <PageContainer>
+    <Router>
+      <Switch>
+        <Route path="/admin" component={AdminRouter} />
+        <Route path="/" component={MainRouter} />
+      </Switch>
+    </Router>
+  </PageContainer>
+);
 
 export default App;
-
-const MainContainer = styled.div`
-  width: 100%;
-  min-height: 100vh;
-`;
