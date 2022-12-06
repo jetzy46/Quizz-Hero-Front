@@ -1,17 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { MainRouter, AdminRouter } from "./index";
-import { PageContainer } from "./index";
 
 const App = () => (
-  <PageContainer>
-    <Router>
-      <Switch>
-        <Route path="/admin" component={AdminRouter} />
-        <Route path="/" component={MainRouter} />
-      </Switch>
-    </Router>
-  </PageContainer>
+  <Routes>
+    <Route path="/admin" element={<AdminRouter />} />
+    <Route path="/" element={<MainRouter />} />
+  </Routes>
 );
 
 export default App;

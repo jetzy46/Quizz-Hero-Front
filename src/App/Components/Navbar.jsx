@@ -6,7 +6,7 @@ function Navbar(props) {
     <MainContainer>
       <h1>Quizz Hero</h1>
       <div>
-        <a href="">Parcourir les catégories</a>
+        <p>Parcourir les catégories</p>
         <button>quizz</button>
       </div>
     </MainContainer>
